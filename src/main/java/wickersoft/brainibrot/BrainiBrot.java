@@ -21,7 +21,7 @@ import javax.imageio.ImageIO;
  */
 public class BrainiBrot {
 
-    public static final int width = 2400, height = 1920;
+    public static final int width = 9600, height = 4320;
     //public static final int width = 1920, height = 1080;
     public static final int order = 8;
     public static final double scaleFactor = 6000, gamma = 0.5;
@@ -29,8 +29,8 @@ public class BrainiBrot {
     public static final double[] yRange = {-1.1, 1.1};
     public static final int iterations = 50000;
     public static final int[] itsteps = {40, 300, 50000};
-    public static final int threads = 4;
-    public static final double dpp = 2;
+    public static final int threads = 8;
+    public static final double dpp = 8;
     public static final double gammaI = 1.2;
     public static final double gammaC = 1;
     public static final boolean dump = false;
@@ -51,6 +51,7 @@ public class BrainiBrot {
         mask_width = renderMask.getWidth();
         mask_height = renderMask.getHeight();
         maskBytes = ((DataBufferByte) renderMask.getRaster().getDataBuffer()).getData();
+        System.out.printf("Mask size: %d x %d (%d px)", mask_width, mask_height, maskBytes.length);
         System.out.println("Done.");
         
         
