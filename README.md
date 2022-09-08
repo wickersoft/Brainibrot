@@ -20,6 +20,7 @@ The c code is configured such that it renders only the top half of the image to 
 The image is symmetric across the x axis, so just use your image editing program when selecting a region.
 If you configure your render to take multiple days, enable dumping of the raw histogram in line ~212. 
 This allows you to change color mapping parameters without having to re-render the entire bitmap... theoretically.
-The code to read this file back into memory has not been implemented :)
+The code to read this file back into memory has not been implemented.
 It's easy though, you'll figure it out.
+
 ![I know](https://imgs.xkcd.com/comics/will_it_work.png)
